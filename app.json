@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "physapp",
+    "name": "PhysApp",
     "slug": "physapp",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -8,15 +8,24 @@
     "scheme": "physapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+    "backgroundColor": "#2A354E",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.physapp.app"
     },
     "android": {
+      "package": "com.physapp.app",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#2A354E"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "credentials": {
+        "keystore": "./physapp-key.jks",
+        "storePassword": "16180227",
+        "keyAlias": "physapp",
+        "keyPassword": "16180227"
+      }
     },
     "web": {
       "bundler": "metro",
@@ -28,15 +37,21 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/logo.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
+          "backgroundColor": "#2A354E"
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "7667d1a9-b50d-4ee7-a87c-9c0991fd9c34"
+      }
     }
   }
 }
